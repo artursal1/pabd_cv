@@ -1,8 +1,8 @@
-FROM tensorflow/tensorflow:2.12.0
-WORKDIR /app
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-COPY ./services ./services
-COPY ./models ./models
-ENTRYPOINT ["python"]
-CMD ["services/server_221234.py"]
+FROM python:3.8-slim-buster
+LABEL authors="artursalmanov"
+
+WORKDIR /ml-project
+ADD . /ml-project
+RUN pip3 install -r requirements.txt
+
+CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
