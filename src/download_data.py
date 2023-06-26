@@ -30,5 +30,5 @@ def unzip_default_zip():
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(extract_path)
 
-# download_default_zip()
+download_default_zip()
 unzip_default_zip()
