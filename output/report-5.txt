@@ -1,0 +1,2 @@
+Test data len: 40000
+Accuracy: 0.817830, Precision: 0.808401, Recall: 0.813761
