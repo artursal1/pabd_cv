@@ -23,5 +23,9 @@ def predict(img):
 
     images = np.vstack([x])
     prediction = model.predict(images)
-    predicted_class = classes[np.argmax(prediction)]
-    return predicted_class
+    dog_probability = float(prediction[0])
+    print(dog_probability)
+    idx = dog_probability > 0.5
+    return ('Cat', 'Dog')[idx]
+    # predicted_class = classes[np.argmax(prediction)]Bug
+    # return predicted_class
