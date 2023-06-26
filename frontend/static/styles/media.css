@@ -1,0 +1,19 @@
+@media screen and (max-width: 500px) {
+    #first_container {
+        padding: 15px;
+    }
+    #first_container .capital {
+        font-size: 50px;
+        width: 50px;
+    }
+    #first_container .p {
+        font-size: 30px;
+    }
+    #first_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    #first_container p {
+        font-size: 16px;
+    }
+}
